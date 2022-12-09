@@ -9,20 +9,22 @@ html(lang="ru")
         link(rel="stylesheet" href="/css/reset.css")
         link(rel="stylesheet" href="/css/index.css")
     body
+        .cover-space
         header.header
-            a.logo(href='/')
-                h1.logo_title Tarkov
-            nav.main-nav
-                ul.main-nav_list
-                    li.main-nav_item
-                        a.main-nav_link.main-nav_link_active(href='#')
-                        Information
-                    li.main-nav_item
-                        a.main-nav_link(href='#') About&nbsp;us
-                    li.main-nav_item
-                        a.main-nav_link(href='#') SBEU
-            label.search
-                .search_icon
-                input.search_form(type="text" placeholder="search")
+            .header__content
+                a.logo(href='/')
+                    h1.logo__title Tarkov
+                nav.main-nav.header__center
+                    ul.main-nav__list
+                        li.main-nav__item
+                            a.main-nav__link.main-nav__link_active(href='#')
+                            Information
+                        li.main-nav__item
+                            a.main-nav__link(href='#') About&nbsp;us
+                        li.main-nav__item
+                            a.main-nav__link(href='#') SBEU
+                label.search
+                    .search__icon
+                    input.search__form(type="text" placeholder="Search")
 
 
