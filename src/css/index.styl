@@ -119,3 +119,35 @@ a{
         }
 
     }
+
+     .section__main{
+         display flex;
+         align-items center;
+         flex-direction column;
+         position absolute;
+         left $main_shift;
+         right $main_shift;
+         top 14vw;
+     }
+
+    .main-title{
+        font-size 1rem
+        margin-bottom 6.2em
+        &__summary{
+            color $main_highLite;
+            text-transform uppercase;
+            letter-spacing .36em;
+            display flex;
+            align-items center;
+            margin-bottom 1.5em
+
+            &::before{
+                content "";
+                display block;
+                width 4em;
+                height 2px;
+                margin-right 1.5em;
+                background $main_highLite;
+            }
+        }
+    }
