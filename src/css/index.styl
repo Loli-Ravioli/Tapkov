@@ -6,226 +6,252 @@ $main_shift = 4.7rem;
 
 html,
 body {
-    font: 18px/1.7 'Open Sans', sans-serif;
+  font: 18px / 1.7 'Open Sans', sans-serif;
 }
-body{
-    background $main_dark url("/images/cover.jpg") no-repeat center top
-    background-size 100% auto
-    color $main_lite
+
+body {
+  background $main_dark url("/images/cover.jpg") no-repeat center top
+  background-size 100% auto
+  color $main_lite
 }
 
 
-a{
-    color: $main_highLite;
-    transition: opacity 0.3s;
-    opacity: 1;
+a {
+  color: $main_highLite;
+  transition: opacity 0.3s;
+  opacity: 1;
 
-    &:visited{
-        color :darken($main_highLite,10);
-    }
-    &:hover,
-    &:active{
-        opacity 0.7;
-    }
+  &:visited {
+    color: darken($main_highLite, 10);
+  }
+
+  &:hover,
+  &:active {
+    opacity 0.7;
+  }
 }
+
 //Main styles
 
 .cover-space {
-    padding-bottom 82%;
+  padding-bottom 82%;
 }
-    .header{
-        position absolute;
-        top 2 rem;
-        width 100%;
 
-        &__content{
-            display grid;
-            grid-template-columns auto 1fr auto;
-            padding 0 $main_shift;
-            align-items center
-        }
-        &__center{
-            display flex;
-            justify-content center;
-        }
+.header {
+  position absolute;
+  top 2rem;
+  width 100%;
+
+  &__content {
+    display grid;
+    grid-template-columns auto 1fr auto;
+    padding 0 $main_shift;
+    align-items center
+  }
+
+  &__center {
+    display flex;
+    justify-content center;
+  }
+}
+
+
+.logo {
+  color $main_lite;
+  text-decoration none;
+  letter-spacing 1%;
+
+  &:visited {
+    color $main_lite;
+  }
+
+  &__title {
+    font-size 1.3rem;
+    font-weight 700;
+  }
+}
+
+.main-nav {
+  &__list {
+    display flex;
+  }
+
+  &__link {
+    color $main_lite;
+    text-decoration none
+    padding 1.8rem 1.38rem;
+    display inline-block;
+
+    &:visited {
+      color $main_lite;
+    }
+  }
+}
+
+.search {
+  display flex;
+  align-items center;
+  justify-content center;
+
+  &__icon {
+    width 1rem
+    height 1rem
+    background url("/images/icons/search.svg") no-repeat center center
+    background-size content;
+    cursor pointer;
+    padding-right 0.5rem;
+  }
+
+  &__form {
+    background none;
+    border none;
+    transition width 0.3s;
+    width 3.4rem
+    font 0.9rem / 1 "Open Sans", sans-serif;
+    padding 0.2rem 0.5rem;
+    border-radius 5px;
+
+    &::placeholder {
+      color white;
+      opacity 1;
     }
 
+    &:focus {
+      border none;
+      outline none;
+      width 10rem;
+      background white;
 
-    .logo{
-        color $main_lite;
-        text-decoration none;
-        letter-spacing 1%;
-        &:visited{
-            color $main_lite;
-        }
-
-        &__title{
-            font-size 1.3rem;
-            font-weight 700;
-        }
+      &::placeholder {
+        color $main_dark;
+      }
     }
+  }
 
-    .main-nav{
-        &__list{
-            display flex;
-        }
-        &__link{
-            color $main_lite;
-            text-decoration none
-            padding 1.8rem 1.38rem;
-            display inline-block;
+}
 
-            &:visited{
-                color $main_lite;
-            }
-        }
+.section__main {
+  display flex;
+  align-items center;
+  flex-direction column;
+  position absolute;
+  left $main_shift;
+  right $main_shift;
+  top 14vw;
+}
+
+.main-title {
+  font-size 1rem
+  margin-bottom 6.2em
+
+  &__summary {
+    font-weight bold
+    color darken($main_highLite, 10);
+    text-transform uppercase;
+    letter-spacing .36em;
+    display flex;
+    align-items center;
+    margin-bottom 1.5em
+
+    &::before {
+      content "";
+      display block;
+      width 4em;
+      height 2px;
+      margin-right 1.5em;
+      background darken($main_highLite, 10);
     }
-    .search{
-        display flex;
-        align-items center;
-        justify-content center;
+  }
 
-        &__icon{
-            width 1rem
-            height 1rem
-            background url("/images/icons/search.svg") no-repeat center center
-            background-size content;
-            cursor pointer;
-            padding-right 0.5rem;
-        }
-        &__form{
-            background none;
-            border none;
-            transition width 0.3s;
-            width 3.4 rem
-            font 0.9rem/1 "Open Sans",sans-serif;
-            padding 0.2rem 0.5rem;
-            border-radius 5px;
+  &__text {
+    font-size 5.4em
+    font-weight 700
+    line-height 1.1
 
-            &::placeholder{
-                color white;
-                opacity 1;
-            }
-            &:focus{
-                border none;
-                outline none;
-                width 10rem;
-                background white;
-
-                &::placeholder{
-                    color $main_dark;
-                }
-            }
-        }
-
+    &_regular {
+      display block;
+      font-size 0.9em
+      font-weight 400;
     }
+  }
+}
 
-     .section__main{
-         display flex;
-         align-items center;
-         flex-direction column;
-         position absolute;
-         left $main_shift;
-         right $main_shift;
-         top 14vw;
-     }
+.social-networks {
+  position absolute;
+  left 0;
+  top 4rem;
 
-    .main-title{
-        font-size 1rem
-        margin-bottom 6.2em
-        &__summary{
-            font-weight bold
-            color darken($main_highLite,10);
-            text-transform uppercase;
-            letter-spacing .36em;
-            display flex;
-            align-items center;
-            margin-bottom 1.5em
+  &__title {
+    writing-mode vertical-lr;
+    margin-bottom 1.3rem;
+  }
 
-            &::before{
-                content "";
-                display block;
-                width 4em;
-                height 2px;
-                margin-right 1.5em;
-                background  darken($main_highLite,10);
-            }
-        }
-        &__text{
-            font-size 5.4em
-            font-weight 700
-            line-height 1.1
-            &_regular{
-                display block;
-                font-size 0.9em
-                font-weight 400;
-            }
-        }
+  &__item {
+
+    margin-bottom 1rem;
+  }
+
+  &__link {
+    display flex;
+    opacity 1;
+    transition opacity 0.3s;
+
+    &:hover {
+      opacity 0.7;
     }
+    justify-content center
+  }
 
-    .social-networks{
-        position absolute;
-        left 0;
-        top 4rem;
-        &__title{
-        writing-mode vertical-lr;
-        margin-bottom 1.3rem;
-        }
-        &__item{
+}
 
-            margin-bottom 1rem;
-        }
-        &__link{
-            display flex;
-            opacity 1;
-            transition opacity 0.3s;
-            &:hover{
-                opacity 0.7;
-            }
-            justify-content center
-        }
+.scroll-down {
+  display flex;
+  cursor pointer;
+  opacity 1;
+  transition 0.3s
 
-    }
-    .scroll-down{
-        display flex;
-        cursor pointer;
-        opacity 1;
-        transition 0.3s
-        &:hover{
-            opacity 0.7;
-        }
+  &:hover {
+    opacity 0.7;
+  }
 
-        &__icon{
-            margin 0.2em 0 2.5em
-        }
-    }
+  &__icon {
+    margin 0.2em 0 2.5em
+  }
+}
 
 
+//icons
 
-        //icons
+.icon__vk {
+  width 1.3rem;
+  height 1.3rem;
+  background url("/images/icons/vk.svg") no-repeat center center;
+  center;
+  background-size cover;
+  display center
+}
 
-        .icon__vk{
-            width 1.3rem;
-            height 1.3rem;
-            background url("/images/icons/vk.svg") no-repeat center center;
-            center;
-            background-size cover;
-            display center
-        }
+.icon__ds {
+  width 1.3rem;
+  height 1.3rem;
+  background url("/images/icons/ds.svg") no-repeat center center;
+  center;
+  background-size cover
+}
 
-        .icon__ds{
-            width 1.3rem;
-            height 1.3rem;
-            background url("/images/icons/ds.svg") no-repeat center center;
-            center;
-            background-size cover
-        }
+.icon__arrow_rightward {
+  width 1.3rem;
+  height 0.9rem;
+  background url("/images/icons/arrow_rightward.svg");
+  center;
+  background-size 1rem;
+}
 
 
-        .icon__arrow__downgard{
-            width 1.3rem;
-            height 1.3rem;
-            background url("/images/icons/arrow_downward.svg") no-repeat center center
-            center;
-            background-size cover
-        }
+.icon__arrow__downgard {
+  width 1.3rem;
+  height 1.3rem;
+  background url("/images/icons/arrow_downward.svg") no-repeat center center
+  center;
+  background-size cover
+}
